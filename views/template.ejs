@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPCL Report FOUR</title>
+
+
+</head>
+
+<body>
+    <div id="main-div">
+        <div class="top-div">
+            <div class="top-div-one">
+                <div class="oil-small-image"></div>
+                <div>
+                    <p class="bpmarrk-two-title">BPMARRK 2.0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-div">
+            <% crudeData.forEach((crude, index)=> { %>
+                <div class="middle-div-four">
+                    <p class="sub-heading">
+                        <%= index + 1 %>. Crude Name: <%= crude.name %>
+                    </p>
+                    <div class="table-description">
+                        <div class="oil-field">
+                            <p class="first">Oil Field</p>
+                            <p class="second">
+                                <%= crude.oilField %>
+                            </p>
+                        </div>
+                        <div class="country">
+                            <p class="first">Source/Country</p>
+                            <p class="second">
+                                <%= crude.sourceCountry %>
+                            </p>
+                        </div>
+                        <div class="region">
+                            <p class="first">Region</p>
+                            <p class="second">
+                                <%= crude.region %>
+                            </p>
+                        </div>
+                        <div class="blend-percentage">
+                            <p class="first">Blend Percentage</p>
+                            <p class="second">
+                                <%= crude.blendPercentage %>
+                            </p>
+                        </div>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Crude oil properties</th>
+                                <th>Inputs</th>
+                                <th>ASTM method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% crude.properties.forEach(prop=> { %>
+                                <tr>
+                                    <td>
+                                        <%= prop.property %>
+                                    </td>
+                                    <td>
+                                        <%= prop.input %>
+                                    </td>
+                                    <td>
+                                        <%= prop.method %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <% }) %>
+        </div>
+        <div class="bottom-div">
+            <div class="bottom-div-container">
+                <p class="left-text"> Report No: <span class="report-number">SCR0003K</span> |
+                    <span>Thursday 29th August, 2019</span> | <span>13:47</span>
+                </p>
+                <p class="right-text">01</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

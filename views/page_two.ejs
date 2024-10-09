@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="new_style.css">
+</head>
+
+<body>
+    <div class="common-header">
+        <%- include('partials/common_header') %>
+    </div>
+    <div id="main-div">
+        <div class="middle-div">
+
+            <div class="middle-div-one">
+                <div class="content-box">
+                    <div class="content-header">
+                        <p class="header-text">TBP distillation profile</p>
+                        <p class="sub-text">Yields (%wt) of refinery products from crude mix-1 crude oil</p>
+                    </div>
+
+                    <div class="inner-divider">
+                        <!-- this divides the box horizontally -->
+                    </div>
+
+                    <div class="vertical-separator">
+                        <!-- left side div -->
+                        <div class="chart">
+                            <canvas id="myChart"></canvas>
+                        </div>
+
+                        <!-- right side div -->
+                        <div class="legends-div">
+                            <div class="legend-text-div">
+                                <p class="legend-para-text">Legends</p>
+                            </div>
+
+                            <div class="legend-values-div">
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #007EC4;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Gas+LPG</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[0] %> %</span> <!-- Displays the first data point -->
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #7FC1E5;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Naptha</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[1] %> %</span>
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #ABE1FF;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Kerosene</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[2] %> %</span>
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color:#A4BBC8;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Gas Oil</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[3] %> %</span>
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #FFF29C;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Vac Gas Oil</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[4] %> %</span>
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #FCDB05;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Vac Residue</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[5] %> %</span>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="middle-div-one">
+                <div class="content-box">
+                    <div class="content-header">
+                        <p class="header-text">TBP distillation profile</p>
+                        <p class="sub-text">Yields (%wt) of refinery products from crude mix-1 crude oil</p>
+                    </div>
+
+                    <div class="inner-divider">
+                        <!-- this divides the box horizontally -->
+                    </div>
+
+                    <div class="vertical-separator">
+                        <!-- left side div -->
+                        <div class="chart">
+                            <canvas id="myChartTwo"></canvas>
+                        </div>
+
+                        <!-- right side div -->
+                        <div class="legends-div">
+                            <div class="legend-text-div">
+                                <p class="legend-para-text">Legends</p>
+                            </div>
+
+                            <div class="legend-values-div">
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #007EC4;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Gas+LPG</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[0] %> %</span> <!-- Displays the first data point -->
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #7FC1E5;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Naptha</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[1] %> %</span>
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #ABE1FF;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Kerosene</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[2] %> %</span>
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color:#A4BBC8;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Gas Oil</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[3] %> %</span>
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #FFF29C;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Vac Gas Oil</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[4] %> %</span>
+                                    </div>
+                                </div>
+
+                                <div class="legend-values-row">
+                                    <div style="display: flex; align-items: center;">
+                                        <span class="legend-color" style="background-color: #FCDB05;"></span>
+                                        <span class="legend-description" style="padding-left: 5px;">Vac Residue</span>
+                                    </div>
+                                    <div>
+                                        <span class="legend-percentage"><%= chartData[5] %> %</span>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="middle-div-two">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="table-header">Gas Composition</th>
+                        </tr>
+                        <tr>
+                            <th class="table-subheader">Gases</th>
+                            <th class="table-subheader">Wt%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Methane</td>
+                            <td>0.0000</td>
+                        </tr>
+                        <tr>
+                            <td>Ethane</td>
+                            <td>0.0100</td>
+                        </tr>
+                        <tr>
+                            <td>Propane</td>
+                            <td>0.2200</td>
+                        </tr>
+                        <tr>
+                            <td>n-Butane</td>
+                            <td>0.8100</td>
+                        </tr>
+                        <tr>
+                            <td>i-Butane</td>
+                            <td>0.1700</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="middle-div-three"></div>
+
+        </div>
+    </div>
+                <%- include('partials/common_footer') %>
+            
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+
+            <script>
+                const ctx = document.getElementById('myChart');
+
+                new Chart(ctx, {
+                    plugins: [ChartDataLabels],
+                    type: 'pie',
+                    data: {
+                        labels: [
+                        // labels have been kept empty
+                        ],
+                        datasets: [{
+                            label: '',
+                            data:  <%= JSON.stringify(chartData) %>,
+                            backgroundColor: [
+                                '#007EC4',
+                                '#7FC1E5',
+                                '#ABE1FF',
+                                '#A4BBC8',
+                                '#FFF29C',
+                                '#FCDB05'
+                            ],
+                        }],
+                    },
+                    options: {
+                        animation: false, // Disable the animation
+
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'right',
+                            },
+                        }
+                    }
+                });
+
+                const ctxTwo = document.getElementById('myChartTwo');
+
+                new Chart(ctxTwo, {
+                    plugins: [ChartDataLabels],
+                    type: 'pie',
+                    data: {
+                        labels: [
+                        // labels have been kept empty
+                        ],
+                        datasets: [{
+                            label: '',
+                            data:  <%= JSON.stringify(chartData) %>,
+                            backgroundColor: [
+                                '#007EC4',
+                                '#7FC1E5',
+                                '#ABE1FF',
+                                '#A4BBC8',
+                                '#FFF29C',
+                                '#FCDB05'
+                            ],
+                        }],
+                    },
+                    options: {
+                        animation: false, // Disable the animation
+
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'right',
+                            },
+                        }
+                    }
+                });
+            </script>
+</body>
+
+</html>

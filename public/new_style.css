@@ -1,0 +1,332 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    background-color: #f0f0f0;
+    height: 100vh;
+
+    background-color: #ffffff;
+}
+
+#main-div {
+    position: relative;
+    left: 0px;
+    width: 210mm;
+    height: 297mm;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-div {
+    position: absolute;
+    bottom: 0;
+    left: 11px;
+    width: 97%;
+    height: 5%;
+    background-color: #007EC4;
+    border-color: blue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.bottom-div-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+    /* Adds 50px margin on both sides */
+    color: rgba(255, 255, 255, 0.7);
+    /* Semi-white color */
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.left-text {
+    /* Left aligned text */
+    text-align: left;
+    color: #FFFFFFB2;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 11.27px;
+    text-align: right;
+}
+
+.right-text {
+    /* Right aligned text */
+    text-align: right;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.report-number {
+    color: white;
+}
+
+
+.top-div {
+    padding: 20px;
+    width: 85%;
+    height: 2%;
+    margin-left: 35px;
+    border-bottom: 1px solid #CEDFEA;
+}
+
+.top-div-one {
+    width: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.oil-small-image {
+    width: 20px;
+    height: 20px;
+    background-image: url('/public/images/Layer_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bpmarrk-two-title {
+    padding-left: 5px;
+    margin-top: 3px;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 13.51px;
+    text-align: left;
+    color: #0E3D57;
+    opacity: 80%;
+}
+
+.middle-div {
+    margin-left: 35px;
+    width: 90%;
+}
+
+.middle-div-two {
+    margin-top: 20px;
+    width: 97%;
+    height: 221px;
+    border-radius: 4px;
+    border: 1px solid #CEDFEA;
+}
+
+
+/*----->> Upper Pie Chart Table<<---- */
+
+.chart {
+    width: 250px;
+    height: 250px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.content-box {
+    margin-top: 30px;
+    width: 97%;
+    height: 350px;
+    border-radius: 4px 0px 0px 0px;
+    border: 1px solid #CEDFEA;
+}
+
+.content-header {
+    margin-left: 30px;
+}
+
+.header-text {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 13.52px;
+    color: #0E3D57;
+}
+
+.sub-text {
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11.5px;
+    color: #5E5E5E;
+}
+
+.inner-divider {
+    margin-top: 13px;
+    border: 1px solid #CEDFEA;
+    width: 100%;
+}
+
+.vertical-separator {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.legend-para-text {
+    text-align: left;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 13.52px;
+    text-align: left;
+
+}
+
+.legends-div {
+    width: 200px;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.legend-color {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 5px;
+    /* border: 1px solid #cedfea;    */
+}
+
+
+.legend-values-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+.legend-description {
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11.5px;
+    text-align: left;
+
+}
+
+.legend-percentage {
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11.5px;
+    text-align: left;
+
+}
+
+/*----->> Upper Pie Chart Table<<---- */
+
+/*----->> Bottom Gases Table <<----- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.table-header {
+    padding: 12px;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 13.52px;
+    color: #0E3D57;
+    text-align: start;
+    background-color: transparent;
+}
+
+.table-subheader {
+    padding: 5px 5px 5px 18px;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #000000;
+    text-align: start;
+    background-color: #EAF3F8;
+}
+
+tbody td {
+    padding: 5px 5px 5px 18px;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+}
+
+tbody td:last-child {
+    text-align: left;
+    color: #5E5E5E;
+}
+
+/* Bottom Gases Table */
+
+/* new_style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.middle-div {
+    padding: 20px;
+}
+
+.middle-div-two {
+    margin-top: 40px; /* Adjust as necessary */
+}
+
+.common-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Adjust height as needed */
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 40px; /* Center the text vertically */
+    z-index: 1000; /* Ensure it sits on top */
+}
+
+
+.common-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    background-color: #ffffff; /* Background color for the header */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+    z-index: 1000; /* Ensure it sits on top */
+}
+
+#main-div {
+    height: calc(297mm - 100px); /* Subtract header and footer heights */
+    overflow: auto; /* Allow scrolling */
+}
+
+.middle-div {
+    padding: 20px; /* Internal padding */
+    margin-bottom: 20px; /* Space between middle-divs */
+    /* Add other styles as needed */
+}
+
+
+
